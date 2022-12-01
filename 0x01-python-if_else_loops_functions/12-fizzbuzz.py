@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def fizzbuzz():
     for number in range(1, 101):
-        if number % 10 == 3:
+        if number % 3 == 0:
             print("Fizz ", end="")
-        elif number % 10 == 5:
+        elif number % 5 == 0:
             print("Buzz ", end="")
         elif number % 15 == 0:
             print("FizzBuzz ", end="")
