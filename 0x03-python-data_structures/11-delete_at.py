@@ -7,4 +7,4 @@ def delete_at(my_list=[], idx=0):
                 return (my_list)
             my_list.remove(i)
         final.append(i)
-    return(fianl)
+    return(final)
