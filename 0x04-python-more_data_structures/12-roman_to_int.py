@@ -5,12 +5,15 @@ def roman_to_int(roman_string):
             "D": 500, "M": 1000
             }
     num = 0
-    cnt = len(roman_string)
 
-    for (id, c) in enumerate(roman_string):
-        if id < cnt - 1 and roman[c] < roman[roman_string[id + 1]):
-            num -= roman[c]
+    for i in range(len(roman_string)):
+        if roman_dict.get(roman_string[i], 0) == 0:
+            return (0)
+        if (i != (len(roman_string) - 1) and
+                roman_dict[roman_string[i]] <
+                roman_dict[roman_string[i + 1]]):
+            num += roman_dict[roman_string[i]] * -1
 
         else:
-            num += roman[c]
+            num += roman_dict[roman_string[i]]
     return num
